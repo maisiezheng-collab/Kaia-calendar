@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#5A6F84">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Kaia课程">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="color-scheme" content="light">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+  <link rel="icon" href="data:image/png;base64,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" type="image/png">
+  <title>Kaia · 课程日历</title>
+  <style>
+    :root {
+      --bg:#eceff1;
+      --surface:#f9faf9;
+      --surface-2:#e2e7ea;
+      --surface-3:#d7dde1;
+      --text:#252b30;
+      --muted:#727b82;
+      --line:#c8d0d4;
+      --berry:#7c5d73;
+      --stone:#7b7069;
+      --green:#647b69;
+      --blue:#54728b;
+      --purple:#6d6085;
+      --slate:#596f78;
+      --teal:#567a78;
+      --shadow:0 18px 60px rgba(42,50,56,.12);
+      --radius:18px;
+      font-family:"SF Pro Rounded","Avenir Next Rounded","PingFang SC","Hiragino Sans GB","Microsoft YaHei UI",system-ui,sans-serif;
+      color:#252b30;
+      background:#eceff1;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text)}
+    body{-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+    button,input,textarea{font:inherit}
+    button{color:inherit}
+    .app{min-height:100%;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(18px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+    .shell{max-width:1460px;margin:0 auto}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:2px 0 10px}
+    .brand{min-width:0;display:flex;align-items:baseline;gap:9px}
+    .brand h1{font-size:clamp(22px,3vw,35px);line-height:1;margin:0;font-weight:760;letter-spacing:-.04em;white-space:nowrap}
+    .brand span{font-size:10px;color:var(--muted);letter-spacing:.14em;white-space:nowrap}
+    .top-actions{display:flex;align-items:center;gap:6px}
+    .icon-btn,.seg button,.ghost,.primary{border:1px solid var(--line);background:var(--surface);border-radius:12px;min-height:40px;cursor:pointer}
+    .icon-btn{width:40px;display:grid;place-items:center;padding:0;font-size:18px}
+    .seg{display:flex;gap:2px;padding:3px;background:var(--surface-2);border:1px solid var(--line);border-radius:13px}
+    .seg button{border:0;min-height:32px;padding:0 12px;background:transparent;color:var(--muted);border-radius:9px}
+    .seg button.active{background:var(--surface);color:var(--text)}
+    .navline{display:flex;align-items:center;gap:7px;margin-bottom:8px}
+    .date-input{height:38px;border:1px solid var(--line);background:var(--surface);border-radius:11px;padding:0 9px;color:var(--text);min-width:142px}
+    .range{font-size:11px;color:var(--muted);margin-left:2px;white-space:nowrap}
+    .content{min-width:0}
+    .week-grid{display:grid;grid-template-columns:repeat(7,minmax(140px,1fr));gap:8px;overflow-x:auto;padding-bottom:4px}
+    .day-card{min-width:140px;background:var(--surface);border:1px solid var(--line);border-radius:17px;overflow:hidden}
+    .day-head{padding:8px 10px 8px;background:var(--surface-2);border-top:6px solid var(--accent);border-bottom:1px solid var(--line)}
+    .day-name{font-size:13px;font-weight:760}
+    .day-date{font-size:10px;color:var(--muted);margin-top:1px}
+    .period{padding:7px 8px 8px;min-height:124px}
+    .period+.period{border-top:1px solid var(--line)}
+    .period-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px}
+    .period-label{font-size:9px;letter-spacing:.16em;font-weight:760;color:var(--muted)}
+    .add-btn{width:27px;height:27px;border:0;background:transparent;border-radius:8px;color:var(--muted);font-size:19px;line-height:1;cursor:pointer}
+    .add-btn:active{background:var(--surface-2)}
+    .lesson-list{display:flex;flex-direction:column;gap:5px}
+    .lesson{border:1px solid var(--line);background:#f2f4f4;border-radius:10px;padding:6px 7px;text-align:left;cursor:pointer;width:100%}
+    .lesson-title{font-size:11.5px;line-height:1.35;font-weight:670;white-space:pre-wrap;overflow-wrap:anywhere}
+    .lesson-meta{margin-top:3px;font-size:8.5px;color:var(--muted);display:flex;align-items:center;gap:5px}
+    .status-dot{width:5px;height:5px;border-radius:999px;background:var(--green)}
+    .lesson.once .status-dot{background:var(--berry)}
+    .empty{font-size:10px;color:var(--muted);opacity:.52;padding:2px 0}
+    .month-view{display:none}
+    .month-view.active{display:block}
+    .week-view.hidden{display:none}
+    .month-title{font-size:13px;font-weight:720;margin:3px 0 8px;color:var(--text)}
+    .month-heads,.month-grid{display:grid;grid-template-columns:repeat(7,minmax(84px,1fr));gap:6px}
+    .month-heads{font-size:10px;color:var(--muted);text-align:center;font-weight:680;margin-bottom:6px}
+    .month-grid{overflow-x:auto}
+    .month-cell{min-height:112px;background:var(--surface);border:1px solid var(--line);border-radius:13px;padding:7px;cursor:pointer}
+    .month-cell.out{opacity:.28}
+    .month-cell.today{box-shadow:inset 0 0 0 1.5px var(--blue)}
+    .month-date{font-size:10.5px;font-weight:760;margin-bottom:4px}
+    .month-line{font-size:8.8px;line-height:1.35;margin-bottom:3px;overflow-wrap:anywhere}
+    .footer{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;border-top:1px solid var(--line);margin-top:12px;padding-top:10px;color:var(--muted);font-size:10px}
+    .footer-actions{display:flex;gap:6px;flex-wrap:wrap}
+    .ghost,.primary{min-height:36px;padding:0 11px}
+    .ghost{background:var(--surface)}
+    .primary{background:var(--text);color:var(--surface);border-color:var(--text)}
+    .overlay{position:fixed;inset:0;background:rgba(20,25,29,.34);display:none;align-items:center;justify-content:center;padding:18px;z-index:30}
+    .overlay.show{display:flex}
+    .sheet{width:min(440px,100%);background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:17px;box-shadow:var(--shadow);max-height:calc(100% - 30px);overflow:auto}
+    .sheet h2{font-size:18px;margin:0 0 3px;letter-spacing:-.02em}
+    .sheet-sub{font-size:10.5px;color:var(--muted);margin-bottom:13px}
+    .field{margin-bottom:11px}
+    .field label{display:block;font-size:10px;color:var(--muted);margin-bottom:5px}
+    .field textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:11px;background:var(--bg);color:var(--text);padding:9px;font-size:16px;resize:vertical;outline:none}
+    .field textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(84,114,139,.12)}
+    .types{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+    .type-btn{border:1px solid var(--line);background:var(--bg);border-radius:11px;padding:9px;text-align:left;cursor:pointer}
+    .type-btn.selected{border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+    .type-btn strong{display:block;font-size:11.5px}
+    .type-btn span{display:block;font-size:9px;color:var(--muted);margin-top:2px}
+    .sheet-actions{display:flex;justify-content:space-between;gap:8px;margin-top:14px}
+    .sheet-actions .right{display:flex;gap:7px}
+    .sheet-actions button{min-height:38px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:0 12px;cursor:pointer}
+    .sheet-actions .save{background:var(--text);color:var(--surface);border-color:var(--text)}
+    .delete{color:#965966}
+    .share-preview{background:var(--surface-2);padding:10px;border-radius:14px;margin:10px 0}
+    .share-preview img{display:block;width:100%;max-width:300px;margin:auto;border-radius:8px;box-shadow:0 8px 26px rgba(31,38,43,.12)}
+    .settings-list{display:grid;gap:8px;margin-top:10px}
+    .settings-list button,.file-label{width:100%;min-height:44px;border:1px solid var(--line);border-radius:12px;background:var(--bg);padding:0 12px;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:12px}
+    .file-label input{display:none}
+    .tiny{font-size:9.5px;color:var(--muted);line-height:1.45}
+    .install-tip{display:none;margin:8px 0 0;padding:8px 10px;background:var(--surface-2);border-radius:10px;font-size:10px;color:var(--muted)}
+    .install-tip.show{display:block}
+    .toast{position:fixed;left:50%;bottom:max(22px,env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);opacity:0;background:#252b30;color:white;padding:9px 12px;border-radius:12px;font-size:11px;transition:.2s ease;z-index:60;pointer-events:none;white-space:nowrap}
+    .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+    @media(max-width:720px){
+      .app{padding-top:max(10px,env(safe-area-inset-top))}
+      .brand span{display:none}
+      .top{margin-bottom:7px}
+      .top-actions{gap:5px}
+      .icon-btn{width:38px;min-height:38px}
+      .seg button{padding:0 10px}
+      .navline{margin-bottom:7px}
+      .range{font-size:10px;overflow:hidden;text-overflow:ellipsis}
+      .week-grid{display:flex;flex-direction:column;gap:6px;overflow:visible}
+      .day-card{min-width:0;width:100%;display:grid;grid-template-columns:88px 1fr 1fr;border-radius:14px}
+      .day-head{border-top:0;border-left:7px solid var(--accent);border-bottom:0;border-right:1px solid var(--line);padding:9px 9px;display:flex;flex-direction:column;justify-content:center}
+      .period{min-height:78px;padding:7px 8px}
+      .period+.period{border-top:0;border-left:1px solid var(--line)}
+      .period-top{margin-bottom:3px}
+      .lesson-list{gap:3px}
+      .lesson{padding:4px 5px;border-radius:8px}
+      .lesson-title{font-size:10px;line-height:1.25}
+      .lesson-meta{font-size:7.5px;margin-top:2px}
+      .add-btn{width:24px;height:24px;font-size:17px}
+      .month-heads,.month-grid{grid-template-columns:repeat(7,minmax(46px,1fr));gap:4px}
+      .month-heads{font-size:8.5px}
+      .month-cell{min-height:78px;padding:5px;border-radius:9px}
+      .month-date{font-size:9px}
+      .month-line{font-size:7.2px;line-height:1.22}
+      .footer{font-size:9px}
+    }
+    @media(max-width:390px){
+      .brand h1{font-size:20px}
+      .date-input{min-width:128px;width:128px}
+      .day-card{grid-template-columns:78px 1fr 1fr}
+      .day-name{font-size:12px}
+      .lesson-title{font-size:9.5px}
+    }
+    @media print{
+      .top-actions,.navline button,.footer,.add-btn{display:none!important}
+      body,.app{background:white}
+      .app{padding:0}
+      .week-grid{overflow:visible;grid-template-columns:repeat(7,1fr)}
+      .day-card{min-width:0}
+    }
+  </style>
+</head>
+<body>
+<div class="app">
+  <main class="shell">
+    <header class="top">
+      <div class="brand"><h1>Kaia · 每周课程</h1><span>CLASS PLANNER</span></div>
+      <div class="top-actions">
+        <div class="seg" aria-label="视图切换"><button id="weekTab" type="button" class="active">周</button><button id="monthTab" type="button">月</button></div>
+        <button id="settingsBtn" class="icon-btn" type="button" aria-label="设置">⋯</button>
+      </div>
+    </header>
+
+    <div class="navline">
+      <button id="prevBtn" class="icon-btn" type="button" aria-label="上一周或上个月">‹</button>
+      <input id="dateInput" class="date-input" type="date" aria-label="选择日期">
+      <button id="nextBtn" class="icon-btn" type="button" aria-label="下一周或下个月">›</button>
+      <div id="rangeText" class="range"></div>
+    </div>
+
+    <div class="content">
+      <section id="weekView" class="week-view"><div id="weekGrid" class="week-grid"></div></section>
+      <section id="monthView" class="month-view">
+        <div id="monthTitle" class="month-title"></div>
+        <div class="month-heads"><div>星期一</div><div>星期二</div><div>星期三</div><div>星期四</div><div>星期五</div><div>星期六</div><div>星期日</div></div>
+        <div id="monthGrid" class="month-grid"></div>
+      </section>
+    </div>
+
+    <footer class="footer">
+      <span>固定课程自动延续；临时课程只显示在指定日期。</span>
+      <div class="footer-actions"><button id="printBtn" class="ghost" type="button">打印 / PDF</button><button id="shareBtn" class="primary" type="button">导出分享图</button></div>
+    </footer>
+    <div id="installTip" class="install-tip">要放到 iPhone 桌面：用 Safari 打开此页面 → 分享 →「添加到主屏幕」。之后就可以像 App 一样直接打开。</div>
+  </main>
+</div>
+
+<div id="editOverlay" class="overlay">
+  <form id="lessonForm" class="sheet" aria-labelledby="editTitle">
+    <h2 id="editTitle">添加课程</h2><div id="editSub" class="sheet-sub"></div>
+    <div class="field"><label for="lessonText">课程与时间</label><textarea id="lessonText" placeholder="例如：16:00–17:00  芭蕾"></textarea></div>
+    <div class="field"><label>这节课是</label><div class="types"><button type="button" class="type-btn selected" data-type="regular"><strong>固定每周</strong><span>从本周起，每周自动出现</span></button><button type="button" class="type-btn" data-type="once"><strong>仅本次</strong><span>只出现在这一天</span></button></div></div>
+    <div class="sheet-actions"><button id="deleteBtn" class="delete" type="button" style="visibility:hidden">删除</button><div class="right"><button id="cancelBtn" type="button">取消</button><button class="save" type="submit">保存</button></div></div>
+  </form>
+</div>
+
+<div id="shareOverlay" class="overlay">
+  <div class="sheet">
+    <h2>分享图预览</h2><div class="sheet-sub">专门排版的竖版图片，不会带编辑按钮。</div>
+    <div class="share-preview"><img id="sharePreview" alt="Kaia 每周课程分享图预览"></div>
+    <div class="sheet-actions"><span></span><div class="right"><button id="closeShareBtn" type="button">返回</button><button id="nativeShareBtn" class="save" type="button">分享 / 存到照片</button></div></div>
+  </div>
+</div>
+
+<div id="settingsOverlay" class="overlay">
+  <div class="sheet">
+    <h2>设置</h2><div class="sheet-sub">课程数据只保存在这台设备的浏览器中。</div>
+    <div class="settings-list">
+      <button id="backupBtn" type="button"><span>备份课程数据</span><span>JSON ›</span></button>
+      <label class="file-label"><span>恢复课程数据</span><span>选择文件 ›</span><input id="restoreInput" type="file" accept="application/json,.json"></label>
+      <button id="installHelpBtn" type="button"><span>添加到 iPhone 主屏幕</span><span>方法 ›</span></button>
+    </div>
+    <p class="tiny">建议偶尔备份一次。换手机、清除 Safari 网站数据或使用不同浏览器时，本机保存的数据不会自动跟随。</p>
+    <div class="sheet-actions"><span></span><div class="right"><button id="closeSettingsBtn" type="button">完成</button></div></div>
+  </div>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  'use strict';
+  const STORAGE_KEY='kaia-class-planner-v1';
+  const weekdays=['星期一','星期二','星期三','星期四','星期五','星期六','星期日'];
+  const accents=['#7c5d73','#7b7069','#647b69','#54728b','#6d6085','#596f78','#567a78'];
+  const $=id=>document.getElementById(id);
+  let state={version:1,focus:'',mode:'week',items:[],seq:1};
+  let editing=null;
+  let editType='regular';
+
+  const pad=n=>String(n).padStart(2,'0');
+  const today=()=>{const d=new Date();return `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`};
+  const parse=s=>{const [y,m,d]=s.split('-').map(Number);return new Date(Date.UTC(y,m-1,d))};
+  const str=d=>`${d.getUTCFullYear()}-${pad(d.getUTCMonth()+1)}-${pad(d.getUTCDate())}`;
+  const add=(s,n)=>{const d=parse(s);d.setUTCDate(d.getUTCDate()+n);return str(d)};
+  const monday=s=>{const d=parse(s);const day=d.getUTCDay();d.setUTCDate(d.getUTCDate()+(day===0?-6:1-day));return str(d)};
+  const parts=s=>{const [y,m,d]=s.split('-').map(Number);return {y,m,d}};
+  const weekdayIndex=s=>(parse(s).getUTCDay()+6)%7;
+  const esc=s=>String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  function load(){
+    try{const raw=localStorage.getItem(STORAGE_KEY);if(raw){const data=JSON.parse(raw);if(data&&Array.isArray(data.items)){state={...state,...data}}}}catch(e){}
+    if(!state.focus) state.focus=today();
+  }
+  function save(){
+    try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state))}catch(e){toast('无法保存到本机，请检查 Safari 设置')}
+  }
+  function toast(message){const el=$('toast');el.textContent=message;el.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(()=>el.classList.remove('show'),2200)}
+  function weekStart(){return monday(state.focus)}
+  function visible(date,wd,period){
+    return state.items.filter(item=>item.period===period && (
+      (item.type==='once' && item.date===date) ||
+      (item.type==='regular' && item.weekday===wd && date>=item.startDate)
+    ));
+  }
+
+  function renderTop(){
+    $('dateInput').value=state.focus;
+    if(state.mode==='week'){
+      const a=weekStart(),b=add(a,6),pa=parts(a),pb=parts(b);
+      $('rangeText').textContent=`${pa.y}年 ${pa.m}月${pa.d}日 — ${pb.m}月${pb.d}日`;
+    } else {
+      const p=parts(state.focus);$('rangeText').textContent=`${p.y}年 ${p.m}月`;
+    }
+  }
+  function periodHTML(date,wd,period,label){
+    const lessons=visible(date,wd,period);
+    const content=lessons.map(item=>`<button type="button" class="lesson ${item.type==='once'?'once':''}" data-id="${item.id}"><div class="lesson-title">${esc(item.text)}</div><div class="lesson-meta"><span class="status-dot"></span>${item.type==='regular'?'固定每周':'仅本次'}</div></button>`).join('');
+    return `<div class="period"><div class="period-top"><span class="period-label">${label}</span><button class="add-btn" type="button" data-date="${date}" data-wd="${wd}" data-period="${period}" aria-label="添加${label}课程">＋</button></div><div class="lesson-list">${content||'<div class="empty">暂无课程</div>'}</div></div>`;
+  }
+  function renderWeek(){
+    const start=weekStart(),grid=$('weekGrid');grid.innerHTML='';
+    for(let i=0;i<7;i++){
+      const date=add(start,i),p=parts(date),card=document.createElement('article');
+      card.className='day-card';card.style.setProperty('--accent',accents[i]);
+      card.innerHTML=`<div class="day-head"><div class="day-name">${weekdays[i]}</div><div class="day-date">${p.m}/${p.d}</div></div>${periodHTML(date,i,'am','上午')}${periodHTML(date,i,'pm','下午')}`;
+      grid.appendChild(card);
+    }
+  }
+  function renderMonth(){
+    const p=parts(state.focus),first=`${p.y}-${pad(p.m)}-01`,next=p.m===12?`${p.y+1}-01-01`:`${p.y}-${pad(p.m+1)}-01`,last=add(next,-1),start=monday(first),end=add(monday(last),6),grid=$('monthGrid');
+    $('monthTitle').textContent=`${p.y}年 ${p.m}月`;
+    grid.innerHTML='';let date=start,count=0;
+    while(date<=end && count<42){
+      const d=parts(date),wd=weekdayIndex(date);
+      const lines=[...visible(date,wd,'am').map(x=>`上午 · ${x.text}`),...visible(date,wd,'pm').map(x=>`下午 · ${x.text}`)];
+      const cell=document.createElement('button');cell.type='button';cell.className='month-cell'+(d.m!==p.m?' out':'')+(date===today()?' today':'');cell.dataset.date=date;
+      cell.innerHTML=`<div class="month-date">${d.m}/${d.d}</div>${lines.map(t=>`<div class="month-line">${esc(t)}</div>`).join('')}`;
+      grid.appendChild(cell);date=add(date,1);count++;
+    }
+  }
+  function render(){renderTop();renderWeek();renderMonth();save()}
+  function setMode(mode){
+    state.mode=mode;$('weekTab').classList.toggle('active',mode==='week');$('monthTab').classList.toggle('active',mode==='month');$('weekView').classList.toggle('hidden',mode==='month');$('monthView').classList.toggle('active',mode==='month');renderTop();if(mode==='month')renderMonth();save();
+  }
+
+  function openEditor(data){
+    editing=data;editType=data.type||'regular';$('lessonText').value=data.text||'';$('editTitle').textContent=data.id?'编辑课程':'添加课程';
+    const p=parts(data.date);$('editSub').textContent=`${weekdays[data.wd]} · ${p.m}月${p.d}日 · ${data.period==='am'?'上午':'下午'}`;
+    document.querySelectorAll('.type-btn').forEach(btn=>btn.classList.toggle('selected',btn.dataset.type===editType));
+    $('deleteBtn').style.visibility=data.id?'visible':'hidden';$('editOverlay').classList.add('show');setTimeout(()=>$('lessonText').focus(),50);
+  }
+  function closeEditor(){editing=null;$('editOverlay').classList.remove('show')}
+
+  document.addEventListener('click',event=>{
+    const addBtn=event.target.closest('.add-btn');
+    if(addBtn) openEditor({date:addBtn.dataset.date,wd:+addBtn.dataset.wd,period:addBtn.dataset.period,type:'regular',text:''});
+    const lesson=event.target.closest('.lesson');
+    if(lesson){const item=state.items.find(x=>x.id===+lesson.dataset.id);if(item){const date=item.type==='once'?item.date:add(weekStart(),item.weekday);openEditor({...item,date,wd:item.weekday})}}
+    const monthCell=event.target.closest('.month-cell');
+    if(monthCell){state.focus=monthCell.dataset.date;setMode('week');render()}
+  });
+  document.querySelectorAll('.type-btn').forEach(btn=>btn.addEventListener('click',()=>{editType=btn.dataset.type;document.querySelectorAll('.type-btn').forEach(x=>x.classList.toggle('selected',x===btn))}));
+  $('lessonForm').addEventListener('submit',event=>{
+    event.preventDefault();if(!editing)return;const text=$('lessonText').value.trim();if(!text){toast('请先输入课程');return}
+    if(editing.id){const idx=state.items.findIndex(x=>x.id===editing.id);if(idx>=0) state.items[idx]={id:editing.id,text,type:editType,weekday:editing.wd,period:editing.period,date:editType==='once'?editing.date:null,startDate:editType==='regular'?(editing.startDate||editing.date):null};}
+    else state.items.push({id:state.seq++,text,type:editType,weekday:editing.wd,period:editing.period,date:editType==='once'?editing.date:null,startDate:editType==='regular'?editing.date:null});
+    closeEditor();render();
+  });
+  $('deleteBtn').addEventListener('click',()=>{if(editing&&editing.id){state.items=state.items.filter(x=>x.id!==editing.id);closeEditor();render()}});
+  $('cancelBtn').addEventListener('click',closeEditor);
+  $('editOverlay').addEventListener('click',e=>{if(e.target===$('editOverlay'))closeEditor()});
+
+  function shiftMonth(delta){const p=parts(state.focus),d=new Date(Date.UTC(p.y,p.m-1+delta,1));state.focus=str(d)}
+  $('prevBtn').addEventListener('click',()=>{state.mode==='week'?state.focus=add(state.focus,-7):shiftMonth(-1);render()});
+  $('nextBtn').addEventListener('click',()=>{state.mode==='week'?state.focus=add(state.focus,7):shiftMonth(1);render()});
+  $('dateInput').addEventListener('change',e=>{if(e.target.value){state.focus=e.target.value;render()}});
+  $('weekTab').addEventListener('click',()=>setMode('week'));
+  $('monthTab').addEventListener('click',()=>setMode('month'));
+  $('printBtn').addEventListener('click',()=>window.print());
+
+  function roundRect(ctx,x,y,w,h,r){ctx.beginPath();ctx.moveTo(x+r,y);ctx.arcTo(x+w,y,x+w,y+h,r);ctx.arcTo(x+w,y+h,x,y+h,r);ctx.arcTo(x,y+h,x,y,r);ctx.arcTo(x,y,x+w,y,r);ctx.closePath()}
+  function wrapText(ctx,text,maxWidth,maxLines){
+    const chars=String(text||'').split(''),lines=[];let line='';
+    for(const ch of chars){const test=line+ch;if(ctx.measureText(test).width>maxWidth&&line){lines.push(line);line=ch;if(lines.length===maxLines-1)break}else line=test}
+    if(line&&lines.length<maxLines)lines.push(line);return lines;
+  }
+  function buildShareCanvas(){
+    const canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1920;const ctx=canvas.getContext('2d');const start=weekStart();
+    ctx.fillStyle='#eceff1';ctx.fillRect(0,0,1080,1920);
+    ctx.fillStyle='#252b30';ctx.font='700 58px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText('Kaia · 每周课程',64,96);
+    const a=parts(start),b=parts(add(start,6));ctx.fillStyle='#727b82';ctx.font='500 24px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText(`${a.y}年 ${a.m}月${a.d}日 — ${b.m}月${b.d}日`,66,140);
+    const top=190,rowH=226,cardH=204;
+    for(let i=0;i<7;i++){
+      const date=add(start,i),p=parts(date),y=top+i*rowH;
+      ctx.fillStyle='#f9faf9';roundRect(ctx,48,y,984,cardH,24);ctx.fill();ctx.strokeStyle='#c8d0d4';ctx.lineWidth=2;ctx.stroke();
+      ctx.fillStyle=accents[i];roundRect(ctx,48,y,16,cardH,8);ctx.fill();
+      ctx.fillStyle='#252b30';ctx.font='700 27px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText(weekdays[i],88,y+48);
+      ctx.fillStyle='#727b82';ctx.font='500 19px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText(`${p.m}月${p.d}日`,88,y+80);
+      ctx.strokeStyle='#d7dde1';ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(260,y+26);ctx.lineTo(260,y+178);ctx.stroke();ctx.beginPath();ctx.moveTo(646,y+26);ctx.lineTo(646,y+178);ctx.stroke();
+      ctx.fillStyle='#727b82';ctx.font='700 16px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText('上午',286,y+38);ctx.fillText('下午',674,y+38);
+      ctx.fillStyle='#252b30';ctx.font='600 20px -apple-system, BlinkMacSystemFont, sans-serif';
+      const am=visible(date,i,'am').map(x=>x.text),pm=visible(date,i,'pm').map(x=>x.text);
+      const amText=am.length?am.join('  ·  '):'—',pmText=pm.length?pm.join('  ·  '):'—';
+      wrapText(ctx,amText,326,5).forEach((line,j)=>ctx.fillText(line,286,y+72+j*27));
+      wrapText(ctx,pmText,324,5).forEach((line,j)=>ctx.fillText(line,674,y+72+j*27));
+    }
+    ctx.fillStyle='#727b82';ctx.font='500 16px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText('KAIA WEEKLY CLASS PLANNER',64,1838);
+    return canvas;
+  }
+  async function canvasFile(canvas){return new Promise(resolve=>canvas.toBlob(blob=>resolve(new File([blob],`Kaia_每周课程_${weekStart()}.png`,{type:'image/png'})),'image/png',1))}
+  $('shareBtn').addEventListener('click',()=>{const canvas=buildShareCanvas();$('sharePreview').src=canvas.toDataURL('image/png');$('shareOverlay').classList.add('show')});
+  $('closeShareBtn').addEventListener('click',()=>$('shareOverlay').classList.remove('show'));
+  $('shareOverlay').addEventListener('click',e=>{if(e.target===$('shareOverlay'))$('shareOverlay').classList.remove('show')});
+  $('nativeShareBtn').addEventListener('click',async()=>{
+    const canvas=buildShareCanvas();const file=await canvasFile(canvas);
+    try{
+      if(navigator.canShare&&navigator.canShare({files:[file]})&&navigator.share){await navigator.share({files:[file],title:'Kaia 每周课程'});}
+      else{const a=document.createElement('a');a.href=URL.createObjectURL(file);a.download=file.name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1500);toast('图片已导出，可在下载中找到')}
+    }catch(err){if(err&&err.name!=='AbortError')toast('分享失败，请再试一次')}
+  });
+
+  $('settingsBtn').addEventListener('click',()=>{$('settingsOverlay').classList.add('show')});
+  $('closeSettingsBtn').addEventListener('click',()=>$('settingsOverlay').classList.remove('show'));
+  $('settingsOverlay').addEventListener('click',e=>{if(e.target===$('settingsOverlay'))$('settingsOverlay').classList.remove('show')});
+  $('backupBtn').addEventListener('click',()=>{
+    const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'}),a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=`Kaia课程备份_${today()}.json`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1500);toast('备份文件已导出');
+  });
+  $('restoreInput').addEventListener('change',async e=>{
+    const file=e.target.files&&e.target.files[0];if(!file)return;
+    try{const data=JSON.parse(await file.text());if(!data||!Array.isArray(data.items))throw new Error('bad');state={...state,...data,focus:state.focus||today()};save();render();toast('课程数据已恢复');}
+    catch(err){toast('这个备份文件无法读取')}
+    e.target.value='';
+  });
+  $('installHelpBtn').addEventListener('click',()=>{$('settingsOverlay').classList.remove('show');$('installTip').classList.add('show');toast('Safari → 分享 → 添加到主屏幕')});
+
+  const standalone=window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true;
+  if(!standalone)$('installTip').classList.add('show');
+  load();render();
+})();
+</script>
+</body>
+</html>
